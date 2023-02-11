@@ -37,4 +37,4 @@
 
 ## Author
 
-- Mubarek Seid
+- Owusu Ebenezer
