@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://intranet.alxswe.com/projects/100017 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ Owning your Learning _ Accra Intranet_files/js"></script><script async="" src="./Project_ Owning your Learning _ Accra Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":5498,"visitorType":"student","batch":{"id":64,"fullNameWithC":"ACC-0123 (C#12)","schoolLocation":{"id":2,"name":"Accra"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: Owning your Learning | Accra Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ Owning your Learning _ Accra Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ Owning your Learning _ Accra Intranet_files/application_alx-e8838960a431efe7da7f5c95f98f095fea27669b6c607782c51551814a5b34fa.css">
+      <script src="./Project_ Owning your Learning _ Accra Intranet_files/loader.js"></script>
+      <script src="./Project_ Owning your Learning _ Accra Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3dd2c9eb846bdd673.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="veRQG98jiF1XH5jJyiDBs8LSWyrbAF7VhgtZAPbQdTY5hZnlL6COCAitA-BO83TXCmZzTHapiNhc3s_IsHrbBw">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="./Project_ Owning your Learning _ Accra Intranet_files/application-f96fd86efca75a5a2930.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ Owning your Learning _ Accra Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230203%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230203T092708Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ecfad54a2b7c30349e0225859701ae805d1cab6744cf3c669ad922dc6c80ac93&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230203%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230203T092708Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ecfad54a2b7c30349e0225859701ae805d1cab6744cf3c669ad922dc6c80ac93&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<div class="project row">
+  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
+
+      <h1 class="gap">Owning your Learning</h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:49,&quot;value&quot;:&quot;Soft-skill&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:66,&quot;value&quot;:&quot;Onboarding&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">Soft-skill</span><span class="label label-primary" style="font-size: 14px;">Onboarding</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Novice&quot;,&quot;author&quot;:&quot;Faith Okoth&quot;,&quot;weight&quot;:0,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-02-02T06:00:00.000+00:00&quot;,&quot;ends_at&quot;:&quot;2023-02-03T06:00:00.000+00:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-02-03T06:00:00.000+00:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Novice</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Faith Okoth</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 0</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-02 06:00 (GMT+00:00)"><span class="datetime">Feb 2, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-03 06:00 (GMT+00:00)"><span class="datetime">Feb 3, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="100017"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at these concepts:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/58">Peer Learning Day - How To Get Started</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/75">The Framework</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/350">Approaching a Project</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/100006">Technical Questioning</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch</strong></p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/cSg_B7cAQHvAyqOQkKvwwQ" title="The Feynman Learning technique" target="_blank">The Feynman Learning technique</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/Am8ESW4cFO4E5SSPFeFlCQ" title="How I tackle projects at ALX (Learn from Firdaus Salim)" target="_blank">How I tackle projects at ALX (Learn from Firdaus Salim)</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/qxj2q2Z6-KTLI5RkEPbYoQ" title="Focus and diffuse mode of thinking watch" target="_blank">Focus and diffuse mode of thinking watch</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/Sls3zZXMDuP5qtoAf6m2Zg" title="Focus and diffuse mode of thinking read" target="_blank">Focus and diffuse mode of thinking read</a></li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/cSg_B7cAQHvAyqOQkKvwwQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<ul>
+<li>what steps do i need to learn how to learn?</li>
+<li>What is the Feynman learning technique and how can I implement it?</li>
+<li>What does it mean to own my own learning journey?</li>
+<li>In what ways can I crack through if I don’t get it***:)“</li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+          <div class="quiz_question_item_container" data-role="quiz_question3089" data-position="2">
+            <div class=" clearfix" id="quiz_question-3089">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>“Which of the following is not a step in the Faynmen learning technique</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3089">
+                <li class="">
+
+  <input type="radio" name="3089" id="3089-1643709518972" value="1643709518972" data-quiz-answer-id="1643709518972" data-quiz-question-id="3089" disabled="disabled">
+  <label for="3089-1643709518972"><p>Pretend to teach a concept you want to learn about to a student in the sixth grade.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3089" id="3089-1643709559459" value="1643709559459" data-quiz-answer-id="1643709559459" data-quiz-question-id="3089" disabled="disabled">
+  <label for="3089-1643709559459"><p>Identify gaps in your explanation. Go back to the source material to better understand it.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3089" id="3089-1643709587642" value="1643709587642" data-quiz-answer-id="1643709587642" data-quiz-question-id="3089" disabled="disabled" checked="checked">
+  <label for="3089-1643709587642"><p>make things bigger, more complex</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3089" id="3089-1643709573076" value="1643709573076" data-quiz-answer-id="1643709573076" data-quiz-question-id="3089" disabled="disabled">
+  <label for="3089-1643709573076"><p>Organize and simplify.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3091" data-position="4">
+            <div class=" clearfix" id="quiz_question-3091">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>“which of the following is part of the recommended learning framework within the ALX program. (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3091">
+                <li class="">
+
+  <input type="checkbox" name="3091" id="3091-1643709699430" value="1643709699430" data-quiz-answer-id="1643709699430" data-quiz-question-id="3091" disabled="disabled" checked="checked">
+  <label for="3091-1643709699430"><p>Read the project prerequisites, man pages, documentation, books, and articles. Try all the examples in the docs</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3091" id="3091-1643709714067" value="1643709714067" data-quiz-answer-id="1643709714067" data-quiz-question-id="3091" disabled="disabled" checked="checked">
+  <label for="3091-1643709714067"><p>Pause, take a breath, and think of the solution. Make sure you understand all of the required concepts and algorithms before you proceed to solve tasks.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3091" id="3091-1643709751296" value="1643709751296" data-quiz-answer-id="1643709751296" data-quiz-question-id="3091" disabled="disabled" checked="checked">
+  <label for="3091-1643709751296"><p>Whether or not your code runs when you input it, make sure you know why it doesn’t (or does) work without looking at the error message.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3091" id="3091-1643709731589" value="1643709731589" data-quiz-answer-id="1643709731589" data-quiz-question-id="3091" disabled="disabled" checked="checked">
+  <label for="3091-1643709731589"><p>Write or draw out your problem on a whiteboard or paper. It’s easier to visualize your problem when it isn’t pure code.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3095" data-position="8">
+            <div class=" clearfix" id="quiz_question-3095">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Which of the following completely describes the difference between focussed thinking and diffused thinking</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3095">
+                <li class="">
+
+  <input type="radio" name="3095" id="3095-1643710070342" value="1643710070342" data-quiz-answer-id="1643710070342" data-quiz-question-id="3095" disabled="disabled">
+  <label for="3095-1643710070342"><p>focussed thinking is like your mind saying “Hey why don’t we tie balloons and just float over it” while diffused 
+thinking is like seeing a brick wall and saying it’s too difficult to run through or climb through.“</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3095" id="3095-1643710052474" value="1643710052474" data-quiz-answer-id="1643710052474" data-quiz-question-id="3095" disabled="disabled" checked="checked">
+  <label for="3095-1643710052474"><p>focussed thinking is like seeing a brick wall and saying it’s just too difficult to run through or climb through while
+diffused thinking is like your mind saying “"Hey why don’t we tie balloons and just float over it</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3092" data-position="5">
+            <div class=" clearfix" id="quiz_question-3092">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>If you still can’t find the solution or understand why your code doesn’t work, google it. Which of the following facts should be considered when googling (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3092">
+                <li class="">
+
+  <input type="checkbox" name="3092" id="3092-1643709844582" value="1643709844582" data-quiz-answer-id="1643709844582" data-quiz-question-id="3092" disabled="disabled" checked="checked">
+  <label for="3092-1643709844582"><p>Only google something specific</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3092" id="3092-1643709825849" value="1643709825849" data-quiz-answer-id="1643709825849" data-quiz-question-id="3092" disabled="disabled">
+  <label for="3092-1643709825849"><p>Trust everything on the Intranet</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3092" id="3092-1643709871421" value="1643709871421" data-quiz-answer-id="1643709871421" data-quiz-question-id="3092" disabled="disabled" checked="checked">
+  <label for="3092-1643709871421"><p>Never copy and paste something from the Internet. You need to understand everything before you implement 
+something you read. Typing yourself - instead of cp/paste - ensures that you better understand and not miss any details.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3110" data-position="10">
+            <div class=" clearfix" id="quiz_question-3110">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Why you should ask and answer technical questions?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3110">
+                <li class="">
+
+  <input type="checkbox" name="3110" id="3110-1651826478777" value="1651826478777" data-quiz-answer-id="1651826478777" data-quiz-question-id="3110" disabled="disabled" checked="checked">
+  <label for="3110-1651826478777"><p>You will gain a better understanding of the problem</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3110" id="3110-1651826462718" value="1651826462718" data-quiz-answer-id="1651826462718" data-quiz-question-id="3110" disabled="disabled" checked="checked">
+  <label for="3110-1651826462718"><p>You learn how to ask questions</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3110" id="3110-1651826488750" value="1651826488750" data-quiz-answer-id="1651826488750" data-quiz-question-id="3110" disabled="disabled" checked="checked">
+  <label for="3110-1651826488750"><p>You learn by answering questions</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+        <div class="alert alert-info">
+            <h4>Tips:</h4>
+            <p>Read the concept page <a href="https://alx-intranet.hbtn.io/concepts/100006" title="Technical Questioning" target="_blank">Technical Questioning</a></p>
+
+        </div>
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3111" data-position="11">
+            <div class=" clearfix" id="quiz_question-3111">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>How do you ask good technical questions?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3111">
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826696723" value="1651826696723" data-quiz-answer-id="1651826696723" data-quiz-question-id="3111" disabled="disabled" checked="checked">
+  <label for="3111-1651826696723"><p>Share what you’ve already tried</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826721578" value="1651826721578" data-quiz-answer-id="1651826721578" data-quiz-question-id="3111" disabled="disabled" checked="checked">
+  <label for="3111-1651826721578"><p>Format, Lint, and Document Your Code</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826638208" value="1651826638208" data-quiz-answer-id="1651826638208" data-quiz-question-id="3111" disabled="disabled" checked="checked">
+  <label for="3111-1651826638208"><p>Provide context</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826614076" value="1651826614076" data-quiz-answer-id="1651826614076" data-quiz-question-id="3111" disabled="disabled" checked="checked">
+  <label for="3111-1651826614076"><p>Sum up your question in a title</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826679725" value="1651826679725" data-quiz-answer-id="1651826679725" data-quiz-question-id="3111" disabled="disabled">
+  <label for="3111-1651826679725"><p>Provide screenshots</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3111" id="3111-1651826666314" value="1651826666314" data-quiz-answer-id="1651826666314" data-quiz-question-id="3111" disabled="disabled" checked="checked">
+  <label for="3111-1651826666314"><p>Provide code sample</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+        <div class="alert alert-info">
+            <h4>Tips:</h4>
+            <p>Read the concept page <a href="https://alx-intranet.hbtn.io/concepts/100006" title="Technical Questioning" target="_blank">Technical Questioning</a></p>
+
+        </div>
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3088" data-position="1">
+            <div class=" clearfix" id="quiz_question-3088">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Which of the following is true about the Feynman learning technique (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3088">
+                <li class="">
+
+  <input type="checkbox" name="3088" id="3088-1643709465623" value="1643709465623" data-quiz-answer-id="1643709465623" data-quiz-question-id="3088" disabled="disabled" checked="checked">
+  <label for="3088-1643709465623"><p>Information is learned when you can explain it and use it in a wide variety of situations.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3088" id="3088-1643709450473" value="1643709450473" data-quiz-answer-id="1643709450473" data-quiz-question-id="3088" disabled="disabled" checked="checked">
+  <label for="3088-1643709450473"><p>Because learning doesn’t happen from skimming through a book or remembering enough to pass a test</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3088" id="3088-1643709479488" value="1643709479488" data-quiz-answer-id="1643709479488" data-quiz-question-id="3088" disabled="disabled" checked="checked">
+  <label for="3088-1643709479488"><p>Ultimately, the point of learning is to understand the world"</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3090" data-position="3">
+            <div class=" clearfix" id="quiz_question-3090">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>According to Richard Faynmen, what does it mean to know: (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3090">
+                <li class="">
+
+  <input type="checkbox" name="3090" id="3090-1643709647184" value="1643709647184" data-quiz-answer-id="1643709647184" data-quiz-question-id="3090" disabled="disabled" checked="checked">
+  <label for="3090-1643709647184"><p>When you only know what something is called, you have no real sense of what it is.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3090" id="3090-1643709617118" value="1643709617118" data-quiz-answer-id="1643709617118" data-quiz-question-id="3090" disabled="disabled" checked="checked">
+  <label for="3090-1643709617118"><p>The person who says he knows what he thinks but cannot express it usually does not know what he thinks</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3090" id="3090-1643709674035" value="1643709674035" data-quiz-answer-id="1643709674035" data-quiz-question-id="3090" disabled="disabled" checked="checked">
+  <label for="3090-1643709674035"><p>When you know something, the labels are unimportant, because it’s not necessary to keep it in the box it came in.“</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3093" data-position="6">
+            <div class=" clearfix" id="quiz_question-3093">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>When Asking a peer for help, it is important to remember…  (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3093">
+                <li class="">
+
+  <input type="checkbox" name="3093" id="3093-1643709947333" value="1643709947333" data-quiz-answer-id="1643709947333" data-quiz-question-id="3093" disabled="disabled" checked="checked">
+  <label for="3093-1643709947333"><p>Respect other people’s time</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3093" id="3093-1643709932762" value="1643709932762" data-quiz-answer-id="1643709932762" data-quiz-question-id="3093" disabled="disabled" checked="checked">
+  <label for="3093-1643709932762"><p>it’s your job to ask and it’s your job to help</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3093" id="3093-1643709964083" value="1643709964083" data-quiz-answer-id="1643709964083" data-quiz-question-id="3093" disabled="disabled" checked="checked">
+  <label for="3093-1643709964083"><p>Explain what the problem is and what you’ve tried"</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3101" data-position="9">
+            <div class=" clearfix" id="quiz_question-3101">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Which is more important: focused vs. diffuse thinking?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3101">
+                <li class="">
+
+  <input type="radio" name="3101" id="3101-1644475832822" value="1644475832822" data-quiz-answer-id="1644475832822" data-quiz-question-id="3101" disabled="disabled">
+  <label for="3101-1644475832822"><p>Diffuse thinking, the brain analyses much more information at once but in less depth</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3101" id="3101-1644475792422" value="1644475792422" data-quiz-answer-id="1644475792422" data-quiz-question-id="3101" disabled="disabled">
+  <label for="3101-1644475792422"><p>Focused thinking, your brain processes very specific information deeply</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3101" id="3101-1644475865535" value="1644475865535" data-quiz-answer-id="1644475865535" data-quiz-question-id="3101" disabled="disabled" checked="checked">
+  <label for="3101-1644475865535"><p>Both are required in order to master a topic or make progress on a difficult project. When you are learning something new, you need to understand both the context for the information (diffuse) and the specifics of the subject (focused).</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3094" data-position="7">
+            <div class=" clearfix" id="quiz_question-3094">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>“When giving help to a peer, it is important to…  (Select all that apply)</p>
+
+<p>”</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3094">
+                <li class="">
+
+  <input type="checkbox" name="3094" id="3094-1643710007589" value="1643710007589" data-quiz-answer-id="1643710007589" data-quiz-question-id="3094" disabled="disabled" checked="checked">
+  <label for="3094-1643710007589"><p>Do NOT give the final answer. You are here to guide, help them find the solution by themselves.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3094" id="3094-1643709989825" value="1643709989825" data-quiz-answer-id="1643709989825" data-quiz-question-id="3094" disabled="disabled" checked="checked">
+  <label for="3094-1643709989825"><p>Respect every question; there is nothing more demotivating than having someone 
+laughing at your question or being asked “what? you still don’t know that?”</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3094" id="3094-1643710022421" value="1643710022421" data-quiz-answer-id="1643710022421" data-quiz-question-id="3094" disabled="disabled" checked="checked">
+  <label for="3094-1643710022421"><p>There are no stupid questions</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task100019" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-100019">
+  <span id="user_id" data-id="5498"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Quiz passed!
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="5498"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>Nothing else, you made it!</p>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm yes" data-task-id="100019">
+      <span class="no"><i aria-hidden="true" class="fa fa-square-o "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa fa-check-square-o "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa fa-spinner  fa-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="100019" data-batch-id="64" data-toggle="modal" data-target="#task-100019-users-done-modal">
+    Help
+  </button>
+  <div class="modal fade users-done-modal" id="task-100019-users-done-modal" data-task-id="100019" data-batch-id="64">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Students who are done with "0. Quiz passed!"</h4>
+        </div>
+        <div class="modal-body">
+            <div class="list-group">
+            </div>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <div class="error"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-default btn-sm check-your-task-100019-modal-button" data-task-id="100019" data-toggle="modal" data-target="#task-test-correction-100019-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:100019}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-100019-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Quiz passed!"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="100019">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="100019">
+        <i aria-hidden="true" class="fa fa-info-circle "></i>
+    </button>
+    <div class="help-container" data-task-id="100019">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>

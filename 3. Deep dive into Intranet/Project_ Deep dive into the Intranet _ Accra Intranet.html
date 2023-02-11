@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://intranet.alxswe.com/projects/100009 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/js"></script><script async="" src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":5498,"visitorType":"student","batch":{"id":64,"fullNameWithC":"ACC-0123 (C#12)","schoolLocation":{"id":2,"name":"Accra"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: Deep dive into the Intranet | Accra Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ Deep dive into the Intranet _ Accra Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ Deep dive into the Intranet _ Accra Intranet_files/application_alx-bd8f82c7d5afa064449a69a1a91b6daef7bdb1c71c00f2646d99a16e5040963a.css">
+      <script src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/loader.js"></script>
+      <script src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/application-fb2ab0247cdaae2347e87bac130aa052747dadacfa429138002d69271946027f.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="npk0cuV2Wx25P-ijPRowtP9pCFxWGMxvV7neTlWxjioa-P2MFfVdSOaNc4q5yYXQN90gOvuxGmKNbEiGExsgGw">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/application-3888a42eeda4c8b53b02.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ Deep dive into the Intranet _ Accra Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230129%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230129T140457Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a1027fb7b009d6cf9a5382c9637b39b3a1b1d0f6dec688b85d6981b6e72f99cc&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230129%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230129T140457Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a1027fb7b009d6cf9a5382c9637b39b3a1b1d0f6dec688b85d6981b6e72f99cc&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<div class="project row">
+  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
+
+      <h1 class="gap">Deep dive into the Intranet</h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:66,&quot;value&quot;:&quot;Onboarding&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">Onboarding</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;author&quot;:&quot;Faith Okoth&quot;,&quot;weight&quot;:0,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-01-24T06:00:00.000+00:00&quot;,&quot;ends_at&quot;:&quot;2023-01-25T06:00:00.000+00:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-01-26T06:00:00.000+00:00&quot;},&quot;level&quot;:&quot;Novice&quot;}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Novice</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Faith Okoth</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 0</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-01-24 06:00 (GMT+00:00)"><span class="datetime">Jan 24, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-01-25 06:00 (GMT+00:00)"><span class="datetime">Jan 25, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          1.0/1 mandatory
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>100.0%</strong>
+        <ul>
+          <li>Mandatory: 100.0%</li>
+            <li>Optional: no optional tasks</li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="100009"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at this concept:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/58">Peer Learning Day - How To Get Started</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <p><br></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+<iframe src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/ce4c8ac0a3204182a003752feb7fd091.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<p><br></p>
+
+<h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/gJwWCJMumX_RqIb1Rgu-wA" title="The Dashboard" target="_blank">The Dashboard</a></li>
+<li> <a href="https://intranet.alxswe.com/rltoken/nPRo7uIVLPCDWosB1UmL7A" title="Projects and Tasks" target="_blank">Projects and Tasks</a></li>
+<li> <a href="https://intranet.alxswe.com/rltoken/GXI2Bl-BZsXIwW5b3vuVXw" title="Peer Learning Day" target="_blank">Peer Learning Day</a></li>
+<li> <a href="https://intranet.alxswe.com/rltoken/sGvGcSP7FCFAuK0_d1abRQ" title="The sandbox as a virtual environment" target="_blank">The sandbox as a virtual environment</a> (available starting tomorrow)</li>
+<li> <a href="https://intranet.alxswe.com/rltoken/NGSO-VPXxo9TlfG_kf1Ncw" title="The checker" target="_blank">The checker</a></li>
+<li> <a href="https://intranet.alxswe.com/rltoken/6TYVbI38dpdznBLN_dEgVw" title="Scoring.pdf" target="_blank">Scoring.pdf</a></li>
+<li> <a href="https://intranet.alxswe.com/rltoken/9HkjGrqvlNZDOrF4cNLNaw" title="Reviewing" target="_blank">Reviewing</a></li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/1-tWteLgGyzTro08w9rkIQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What are peer learning days</li>
+<li>How does the checker work</li>
+<li>How are my projects graded</li>
+<li>How does the sandbox work</li>
+<li>How to submit a manual review </li>
+<li>How to review others</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h4>Example for grading</h4>
+
+<p>The following participant scored this for the project C - Hello World.</p>
+
+<p>Mandatory tasks:</p>
+
+<ul>
+<li>Task 0 worth 5 points: Finished before first deadline: 5 * 100% = 5 points</li>
+<li>Task 1 worth 5 points: Finished before first deadline: 5 * 100% = 5 points</li>
+<li>Task 2 worth 5 points: Finished before first deadline: 5 * 100% = 5 points</li>
+<li>Task 3 worth 5 points: Finished before first deadline: 5 * 100% = 5 points</li>
+<li>Task 4 worth 7 points: Finished before first deadline: 7 * 100% = 7 points</li>
+<li>Task 5 worth 7 points: Finished before first deadline: 7 * 100% = 7 points</li>
+<li>Task 6 worth 7 points: Finished before second deadline: 7 * 65% = 4,55 points</li>
+</ul>
+
+<p>Optional tasks:</p>
+
+<ul>
+<li>Task 7 worth 5 points: Finished before second deadline: 5 * 65% = 3,25 points</li>
+<li>Task 8 worth 7 points: Finished before second deadline: 7 * 65% = 4,55 points</li>
+</ul>
+
+<p><img src="./Project_ Deep dive into the Intranet _ Accra Intranet_files/8685ef0bae103b876ebc6839706b655fa98467d7.png" alt="" loading="lazy" style=""></p>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Hide quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: block;">
+          <div class="quiz_question_item_container" data-role="quiz_question3085" data-position="15">
+            <div class=" clearfix" id="quiz_question-3085">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>In case of a project with 4 tasks, 3 of which are mandatory and each 10 points. and one is optional (advanced) for 10 points.
+Finished the first two tasks before the first deadline, 
+Finished third task before second deadline,
+Finished The last optional task after the second deadline
+What will my score be?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3085">
+                <li class="">
+
+  <input type="radio" name="3085" id="3085-1643173515521" value="1643173515521" data-quiz-answer-id="1643173515521" data-quiz-question-id="3085" disabled="disabled">
+  <label for="3085-1643173515521"><p>90,25%</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3085" id="3085-1643173523713" value="1643173523713" data-quiz-answer-id="1643173523713" data-quiz-question-id="3085" disabled="disabled">
+  <label for="3085-1643173523713"><p>136,66%</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3085" id="3085-1643173540512" value="1643173540512" data-quiz-answer-id="1643173540512" data-quiz-question-id="3085" disabled="disabled">
+  <label for="3085-1643173540512"><p>120%</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3085" id="3085-1643173531018" value="1643173531018" data-quiz-answer-id="1643173531018" data-quiz-question-id="3085" disabled="disabled" checked="checked">
+  <label for="3085-1643173531018"><p>132,5%</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3086" data-position="16">
+            <div class=" clearfix" id="quiz_question-3086">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>In the intro video we import the time module and use sleep, i.e. <code>from time import sleep</code>. In a general sense, why is it important to get enough sleep and maintain good sleep hygiene? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3086">
+                <li class="">
+
+  <input type="checkbox" name="3086" id="3086-1643173574396" value="1643173574396" data-quiz-answer-id="1643173574396" data-quiz-question-id="3086" disabled="disabled" checked="checked">
+  <label for="3086-1643173574396"><p>When you sleep, new connections are made in your brain that were not there during the day and it makes you understand better</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3086" id="3086-1643173584447" value="1643173584447" data-quiz-answer-id="1643173584447" data-quiz-question-id="3086" disabled="disabled" checked="checked">
+  <label for="3086-1643173584447"><p>Good sleep can maximize problem-solving skills and enhance memory.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3086" id="3086-1643173609070" value="1643173609070" data-quiz-answer-id="1643173609070" data-quiz-question-id="3086" disabled="disabled" checked="checked">
+  <label for="3086-1643173609070"><p>Poor sleep is linked to depression, not being able to cope with all that is coming towards us.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3086" id="3086-1643173599421" value="1643173599421" data-quiz-answer-id="1643173599421" data-quiz-question-id="3086" disabled="disabled" checked="checked">
+  <label for="3086-1643173599421"><p>Poor sleep has been shown to impair brain function.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3072" data-position="2">
+            <div class=" clearfix" id="quiz_question-3072">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the duration of the foundations?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3072">
+                <li class="">
+
+  <input type="radio" name="3072" id="3072-1643172508712" value="1643172508712" data-quiz-answer-id="1643172508712" data-quiz-question-id="3072" disabled="disabled">
+  <label for="3072-1643172508712"><p>6 months</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3072" id="3072-1643172516622" value="1643172516622" data-quiz-answer-id="1643172516622" data-quiz-question-id="3072" disabled="disabled" checked="checked">
+  <label for="3072-1643172516622"><p>9 months</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3072" id="3072-1643172531536" value="1643172531536" data-quiz-answer-id="1643172531536" data-quiz-question-id="3072" disabled="disabled">
+  <label for="3072-1643172531536"><p>12 months</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3072" id="3072-1643172524095" value="1643172524095" data-quiz-answer-id="1643172524095" data-quiz-question-id="3072" disabled="disabled">
+  <label for="3072-1643172524095"><p>3 months</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3083" data-position="13">
+            <div class=" clearfix" id="quiz_question-3083">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>When should I use the checker</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3083">
+                <li class="">
+
+  <input type="radio" name="3083" id="3083-1643173435788" value="1643173435788" data-quiz-answer-id="1643173435788" data-quiz-question-id="3083" disabled="disabled" checked="checked">
+  <label for="3083-1643173435788"><p>I will develop and test my code myself - the checker is there to confirm the checks I have done myself.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3083" id="3083-1643173428494" value="1643173428494" data-quiz-answer-id="1643173428494" data-quiz-question-id="3083" disabled="disabled">
+  <label for="3083-1643173428494"><p>I am dependent on the checker - this is the only way to check my code</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3074" data-position="4">
+            <div class=" clearfix" id="quiz_question-3074">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What are the steps of the Feynman Learning Technique? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3074">
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1674521143678" value="1674521143678" data-quiz-answer-id="1674521143678" data-quiz-question-id="3074" disabled="disabled" checked="checked">
+  <label for="3074-1674521143678"><p>Step 3: Reflect, Refine, and Simplify</p>
+
+<p>Only when you can explain the subject in simple terms do you understand it.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1674521147571" value="1674521147571" data-quiz-answer-id="1674521147571" data-quiz-question-id="3074" disabled="disabled" checked="checked">
+  <label for="3074-1674521147571"><p>Step 4: Organize and Review</p>
+
+<p>To test your understanding in the real world, run it by someone else. How effective was your explanation? What questions did they ask? What parts did they get confused about?</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1643172653593" value="1643172653593" data-quiz-answer-id="1643172653593" data-quiz-question-id="3074" disabled="disabled">
+  <label for="3074-1643172653593"><p>Step 1: Open a random page and start reading/watching</p>
+
+<p>Once you find a topic, sit back and relax while you consume the newly found knowledge. It is enough to passively take the new information in.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1643172628566" value="1643172628566" data-quiz-answer-id="1643172628566" data-quiz-question-id="3074" disabled="disabled" checked="checked">
+  <label for="3074-1643172628566"><p>Step 1: Choose a concept you want to learn about.</p>
+
+<p>Once you identify a topic, take out a blank sheet of paper. Write out everything you know about the subject you want to understand as if you were teaching it to a child.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1643172671971" value="1643172671971" data-quiz-answer-id="1643172671971" data-quiz-question-id="3074" disabled="disabled" checked="checked">
+  <label for="3074-1643172671971"><p>Step 2: Explain it to a 12-year-old</p>
+
+<p>Now that you think you understand a topic reasonably well, explain it to a 12-year-old.</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3074" id="3074-1643172663225" value="1643172663225" data-quiz-answer-id="1643172663225" data-quiz-question-id="3074" disabled="disabled">
+  <label for="3074-1643172663225"><p>Step 2: Close your eyes and think</p>
+
+<p>Now that you think you understand a topic reasonably well, close your eyes and think about your topic.</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3084" data-position="14">
+            <div class=" clearfix" id="quiz_question-3084">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>When will the checker details be available to me? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3084">
+                <li class="">
+
+  <input type="checkbox" name="3084" id="3084-1643173452697" value="1643173452697" data-quiz-answer-id="1643173452697" data-quiz-question-id="3084" disabled="disabled" checked="checked">
+  <label for="3084-1643173452697"><p>Only in the first few projects</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3084" id="3084-1643173460696" value="1643173460696" data-quiz-answer-id="1643173460696" data-quiz-question-id="3084" disabled="disabled">
+  <label for="3084-1643173460696"><p>Always</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3084" id="3084-1645102504135" value="1645102504135" data-quiz-answer-id="1645102504135" data-quiz-question-id="3084" disabled="disabled" checked="checked">
+  <label for="3084-1645102504135"><p>After the deadline</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3084" id="3084-1643173472506" value="1643173472506" data-quiz-answer-id="1643173472506" data-quiz-question-id="3084" disabled="disabled">
+  <label for="3084-1643173472506"><p>Never</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3078" data-position="8">
+            <div class=" clearfix" id="quiz_question-3078">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What should you do when you have time left in the PLD (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3078">
+                <li class="">
+
+  <input type="checkbox" name="3078" id="3078-1643173007533" value="1643173007533" data-quiz-answer-id="1643173007533" data-quiz-question-id="3078" disabled="disabled" checked="checked">
+  <label for="3078-1643173007533"><p>Code challenges</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3078" id="3078-1643173035233" value="1643173035233" data-quiz-answer-id="1643173035233" data-quiz-question-id="3078" disabled="disabled">
+  <label for="3078-1643173035233"><p>Leave the session</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3078" id="3078-1643173050683" value="1643173050683" data-quiz-answer-id="1643173050683" data-quiz-question-id="3078" disabled="disabled" checked="checked">
+  <label for="3078-1643173050683"><p>Look into previous concepts</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3078" id="3078-1643173043376" value="1643173043376" data-quiz-answer-id="1643173043376" data-quiz-question-id="3078" disabled="disabled" checked="checked">
+  <label for="3078-1643173043376"><p>Internet projects</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3075" data-position="5">
+            <div class=" clearfix" id="quiz_question-3075">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the aim of a PLD session? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3075">
+                <li class="">
+
+  <input type="checkbox" name="3075" id="3075-1643172800812" value="1643172800812" data-quiz-answer-id="1643172800812" data-quiz-question-id="3075" disabled="disabled" checked="checked">
+  <label for="3075-1643172800812"><p>To ensure each and every one of our peers understands content</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3075" id="3075-1643172774348" value="1643172774348" data-quiz-answer-id="1643172774348" data-quiz-question-id="3075" disabled="disabled" checked="checked">
+  <label for="3075-1643172774348"><p>To empower peers with the ability to solve problems</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3075" id="3075-1643172756308" value="1643172756308" data-quiz-answer-id="1643172756308" data-quiz-question-id="3075" disabled="disabled">
+  <label for="3075-1643172756308"><p>To provide your peers with answers and share solutions</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3075" id="3075-1643172809945" value="1643172809945" data-quiz-answer-id="1643172809945" data-quiz-question-id="3075" disabled="disabled" checked="checked">
+  <label for="3075-1643172809945"><p>To ensure everyone is collectively growing in technical, soft and professional skills</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3075" id="3075-1643172787004" value="1643172787004" data-quiz-answer-id="1643172787004" data-quiz-question-id="3075" disabled="disabled" checked="checked">
+  <label for="3075-1643172787004"><p>To share your thought processes </p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3080" data-position="10">
+            <div class=" clearfix" id="quiz_question-3080">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What happens when I close the web terminal window/tab</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3080">
+                <li class="">
+
+  <input type="radio" name="3080" id="3080-1643173155035" value="1643173155035" data-quiz-answer-id="1643173155035" data-quiz-question-id="3080" disabled="disabled">
+  <label for="3080-1643173155035"><p>I will be notified that I still have running processes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3080" id="3080-1643173167472" value="1643173167472" data-quiz-answer-id="1643173167472" data-quiz-question-id="3080" disabled="disabled" checked="checked">
+  <label for="3080-1643173167472"><p>The process will remain running in the background</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3080" id="3080-1643173189551" value="1643173189551" data-quiz-answer-id="1643173189551" data-quiz-question-id="3080" disabled="disabled">
+  <label for="3080-1643173189551"><p>Nothing</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3080" id="3080-1643173176437" value="1643173176437" data-quiz-answer-id="1643173176437" data-quiz-question-id="3080" disabled="disabled">
+  <label for="3080-1643173176437"><p>The process will stop running</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3081" data-position="11">
+            <div class=" clearfix" id="quiz_question-3081">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>How can I interact with the sandbox? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3081">
+                <li class="">
+
+  <input type="checkbox" name="3081" id="3081-1643173265142" value="1643173265142" data-quiz-answer-id="1643173265142" data-quiz-question-id="3081" disabled="disabled">
+  <label for="3081-1643173265142"><p>SMTP</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3081" id="3081-1643173238805" value="1643173238805" data-quiz-answer-id="1643173238805" data-quiz-question-id="3081" disabled="disabled" checked="checked">
+  <label for="3081-1643173238805"><p>SSH</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3081" id="3081-1643173223848" value="1643173223848" data-quiz-answer-id="1643173223848" data-quiz-question-id="3081" disabled="disabled" checked="checked">
+  <label for="3081-1643173223848"><p>Webterminal</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3081" id="3081-1643173274929" value="1643173274929" data-quiz-answer-id="1643173274929" data-quiz-question-id="3081" disabled="disabled">
+  <label for="3081-1643173274929"><p>IMAP</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3081" id="3081-1643173250637" value="1643173250637" data-quiz-answer-id="1643173250637" data-quiz-question-id="3081" disabled="disabled" checked="checked">
+  <label for="3081-1643173250637"><p>SFTP</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3082" data-position="12">
+            <div class=" clearfix" id="quiz_question-3082">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the purpose of the checker? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3082">
+                <li class="">
+
+  <input type="checkbox" name="3082" id="3082-1643173331745" value="1643173331745" data-quiz-answer-id="1643173331745" data-quiz-question-id="3082" disabled="disabled">
+  <label for="3082-1643173331745"><p>It is AI that will help you debug your code</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3082" id="3082-1643173385926" value="1643173385926" data-quiz-answer-id="1643173385926" data-quiz-question-id="3082" disabled="disabled" checked="checked">
+  <label for="3082-1643173385926"><p>To score your project</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3082" id="3082-1643173406950" value="1643173406950" data-quiz-answer-id="1643173406950" data-quiz-question-id="3082" disabled="disabled">
+  <label for="3082-1643173406950"><p>To extend the deadline</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3082" id="3082-1643173396525" value="1643173396525" data-quiz-answer-id="1643173396525" data-quiz-question-id="3082" disabled="disabled" checked="checked">
+  <label for="3082-1643173396525"><p>To check your code</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3071" data-position="1">
+            <div class=" clearfix" id="quiz_question-3071">
+
+    <h4 class="quiz_question">
+        
+        Question #11
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Where can I find a summary and details of my scores?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3071">
+                <li class="">
+
+  <input type="radio" name="3071" id="3071-1643172420191" value="1643172420191" data-quiz-answer-id="1643172420191" data-quiz-question-id="3071" disabled="disabled" checked="checked">
+  <label for="3071-1643172420191"><p>Dashboard, click on the eye icon</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3071" id="3071-1643172427949" value="1643172427949" data-quiz-answer-id="1643172427949" data-quiz-question-id="3071" disabled="disabled">
+  <label for="3071-1643172427949"><p>My Profile</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3071" id="3071-1643172442892" value="1643172442892" data-quiz-answer-id="1643172442892" data-quiz-question-id="3071" disabled="disabled">
+  <label for="3071-1643172442892"><p>Slack</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3071" id="3071-1643172435420" value="1643172435420" data-quiz-answer-id="1643172435420" data-quiz-question-id="3071" disabled="disabled">
+  <label for="3071-1643172435420"><p>Concepts page</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3073" data-position="3">
+            <div class=" clearfix" id="quiz_question-3073">
+
+    <h4 class="quiz_question">
+        
+        Question #12
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the purpose of the Captains Log? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3073">
+                <li class="">
+
+  <input type="checkbox" name="3073" id="3073-1643172601713" value="1643172601713" data-quiz-answer-id="1643172601713" data-quiz-question-id="3073" disabled="disabled">
+  <label for="3073-1643172601713"><p>To increase your network</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3073" id="3073-1643172578919" value="1643172578919" data-quiz-answer-id="1643172578919" data-quiz-question-id="3073" disabled="disabled" checked="checked">
+  <label for="3073-1643172578919"><p>To flag issues if any</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3073" id="3073-1643172570878" value="1643172570878" data-quiz-answer-id="1643172570878" data-quiz-question-id="3073" disabled="disabled" checked="checked">
+  <label for="3073-1643172570878"><p>To let the team know how you are doing</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3073" id="3073-1674520819766" value="1674520819766" data-quiz-answer-id="1674520819766" data-quiz-question-id="3073" disabled="disabled" checked="checked">
+  <label for="3073-1674520819766"><p>To reflect on your learning journey</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3073" id="3073-1643172594677" value="1643172594677" data-quiz-answer-id="1643172594677" data-quiz-question-id="3073" disabled="disabled">
+  <label for="3073-1643172594677"><p>To apply for a job</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3076" data-position="6">
+            <div class=" clearfix" id="quiz_question-3076">
+
+    <h4 class="quiz_question">
+        
+        Question #13
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What are the elements of a PLD? (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3076">
+                <li class="">
+
+  <input type="checkbox" name="3076" id="3076-1643172856112" value="1643172856112" data-quiz-answer-id="1643172856112" data-quiz-question-id="3076" disabled="disabled" checked="checked">
+  <label for="3076-1643172856112"><p>Clarify Action Items</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3076" id="3076-1643172866025" value="1643172866025" data-quiz-answer-id="1643172866025" data-quiz-question-id="3076" disabled="disabled" checked="checked">
+  <label for="3076-1643172866025"><p>Whiteboarding</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3076" id="3076-1643172886182" value="1643172886182" data-quiz-answer-id="1643172886182" data-quiz-question-id="3076" disabled="disabled" checked="checked">
+  <label for="3076-1643172886182"><p>Share group progress</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3076" id="3076-1643172875498" value="1643172875498" data-quiz-answer-id="1643172875498" data-quiz-question-id="3076" disabled="disabled" checked="checked">
+  <label for="3076-1643172875498"><p>Pair/Group Program</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3079" data-position="9">
+            <div class=" clearfix" id="quiz_question-3079">
+
+    <h4 class="quiz_question">
+        
+        Question #14
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the preferred development environment?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3079">
+                <li class="">
+
+  <input type="radio" name="3079" id="3079-1643173114726" value="1643173114726" data-quiz-answer-id="1643173114726" data-quiz-question-id="3079" disabled="disabled">
+  <label for="3079-1643173114726"><p>Mac Os Big Sur</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3079" id="3079-1643173094848" value="1643173094848" data-quiz-answer-id="1643173094848" data-quiz-question-id="3079" disabled="disabled" checked="checked">
+  <label for="3079-1643173094848"><p>Ubuntu 20.04</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3079" id="3079-1643173082111" value="1643173082111" data-quiz-answer-id="1643173082111" data-quiz-question-id="3079" disabled="disabled">
+  <label for="3079-1643173082111"><p>Windows 10</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3079" id="3079-1643173123323" value="1643173123323" data-quiz-answer-id="1643173123323" data-quiz-question-id="3079" disabled="disabled">
+  <label for="3079-1643173123323"><p>Chrome OS</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="3079" id="3079-1643173106525" value="1643173106525" data-quiz-answer-id="1643173106525" data-quiz-question-id="3079" disabled="disabled">
+  <label for="3079-1643173106525"><p>Red Hat Enterprise 8.4</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question3077" data-position="7">
+            <div class=" clearfix" id="quiz_question-3077">
+
+    <h4 class="quiz_question">
+        
+        Question #15
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>I can learn best by…  (Select all that apply)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="3077">
+                <li class="">
+
+  <input type="checkbox" name="3077" id="3077-1643172948934" value="1643172948934" data-quiz-answer-id="1643172948934" data-quiz-question-id="3077" disabled="disabled" checked="checked">
+  <label for="3077-1643172948934"><p>Doing</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3077" id="3077-1643172928792" value="1643172928792" data-quiz-answer-id="1643172928792" data-quiz-question-id="3077" disabled="disabled" checked="checked">
+  <label for="3077-1643172928792"><p>Having another person explain it to me</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3077" id="3077-1643172911837" value="1643172911837" data-quiz-answer-id="1643172911837" data-quiz-question-id="3077" disabled="disabled" checked="checked">
+  <label for="3077-1643172911837"><p>Explaining it to another person</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3077" id="3077-1643172972005" value="1643172972005" data-quiz-answer-id="1643172972005" data-quiz-question-id="3077" disabled="disabled">
+  <label for="3077-1643172972005"><p>Copy-pasting another person’s code</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="3077" id="3077-1643172939533" value="1643172939533" data-quiz-answer-id="1643172939533" data-quiz-question-id="3077" disabled="disabled">
+  <label for="3077-1643172939533"><p>Skipping the PLD</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+      </section>
+    </div>
+  </div>
+
+
+        
+          <h2 class="gap">Tasks</h2>
+
+    <div data-role="task100018" data-position="1" id="task-num-0">
+      <div class="panel panel-default task-card " id="task-100018">
+  <span id="user_id" data-id="5498"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Quiz passed!
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="5498"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar" data-task-id="100018" data-correction-id="8330143">
+        <div class="task_progress_bar" style="width: 100.0%">
+          <div class="task_score_bar" style="width: 100.0%">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">100.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Nothing else, you made it!</p>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task URLs -->
+
+    <!-- Github information -->
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+    <button class="student_task_done btn btn-default btn-sm yes" data-task-id="100018">
+      <span class="no"><i aria-hidden="true" class="fa fa-square-o "></i></span>
+      <span class="yes"><i aria-hidden="true" class="fa fa-check-square-o "></i></span>
+      <span class="pending"><i aria-hidden="true" class="fa fa-spinner  fa-pulse"></i></span>
+      Done<span class="no pending">?</span><span class="yes">!</span>
+    </button>
+
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="100018" data-batch-id="64" data-toggle="modal" data-target="#task-100018-users-done-modal">
+    Help
+  </button>
+  <div class="modal fade users-done-modal" id="task-100018-users-done-modal" data-task-id="100018" data-batch-id="64">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Students who are done with "0. Quiz passed!"</h4>
+        </div>
+        <div class="modal-body">
+            <div class="list-group">
+            </div>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <div class="error"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-default btn-sm check-your-task-100018-modal-button" data-task-id="100018" data-toggle="modal" data-target="#task-test-correction-100018-correction-modal" id="task-num-0-check-code-btn" data-gtm-custom-event-name="task_checker_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:100018}">
+          Check your code
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-100018-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "0. Quiz passed!"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="100018">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="100018">
+        <i aria-hidden="true" class="fa fa-info-circle "></i>
+    </button>
+    <div class="help-container" data-task-id="100018">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+      <button class="btn btn-default btn-sm" data-task-id="100018" data-toggle="modal" data-target="#task-qa-review-100018-modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:100018}">
+        QA Review
+      </button>
+      <div class="modal fade task_get_qa_review" id="task-qa-review-100018-modal" data-correction-id="8330143" data-task-id="100018">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">0. Quiz passed!</h4>
+            </div>
+            <div class="modal-body">
+                <div class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div class="review-container">
+                    <div class="review-corrector"></div>
+                    <div class="review-github well" style="display:none">
+                        <h5>Commit used:</h5>
+                        <ul>
+                            <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+                            <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+                            <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+                            <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+                            <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+                            <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+                        </ul>
+                    </div>
+                    <div class="review-percentage_down"></div>
+                    <ul class="review-checks list-group sm-gap"></ul>
+                    <div class="review-comment"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+        <div class="fs-4">
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>
