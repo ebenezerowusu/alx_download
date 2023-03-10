@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/214 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/js"></script><script async="" src="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":5498,"visitorType":"student","batch":{"id":64,"fullNameWithC":"ACC-0123 (C#12)","schoolLocation":{"id":2,"name":"Accra"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x02. C - Functions, nested loops | Accra Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/application_alx-5cd7b579ddb6d0571ae6ab271f02344e26a6e5dd6ec5b7a6348f6b267ccbb933.css">
+      <script src="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3dd2c9eb846bdd673.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BPBJy7LMCufAz9elxwPwSEigMFxhTVxNI7AVApPzwKcFIhyHIZN2uw21VtnuPW91Ef3IntItVrEzgqWpvEwd7g">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/application-af6c05f628c911d935b1.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x02. C - Functions, nested loops _ Accra Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<div class="project row">
+  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
+
+      <h1 class="gap">0x02. C - Functions, nested loops</h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:7,&quot;value&quot;:&quot;C&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">C</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;author&quot;:&quot;Julien Barbier&quot;,&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-02-21T06:00:00.000+00:00&quot;,&quot;ends_at&quot;:&quot;2023-02-22T06:00:00.000+00:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-02-23T06:00:00.000+00:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Julien Barbier</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-21 06:00 (GMT+00:00)"><span class="datetime">Feb 21, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-22 06:00 (GMT+00:00)"><span class="datetime">Feb 22, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          0.0/106 mandatory
+            &amp;
+            0.0/36 optional
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>0.0%</strong>
+        <ul>
+          <li>Mandatory: 0.0%</li>
+            <li>Optional: 0.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  0.0%
+                    + (0.0% * 0.0%)
+              &nbsp;==&nbsp;<strong>0.0%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="214"></div>
+
+
+
+      
+
+      
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/_4aLZ5nW24njUT2VbSZdQQ" title="Nested while loops" target="_blank">Nested while loops</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/Vg1zzzrxLhPh71405uggSg" title="C - Functions" target="_blank">C - Functions</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/jveXtnJII2S0z7a06c7-JA" title="Learning to Program in C (Part 06)" target="_blank">Learning to Program in C (Part 06)</a> (<em>stop at 14:00</em>)</li>
+<li><a href="https://intranet.alxswe.com/rltoken/XZ--UJZO76ZoUWNA9bTmbg" title="What is the purpose of a function prototype?" target="_blank">What is the purpose of a function prototype?</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/AS8JW4ObD5gmyX2mgtqV0A" title="C - Header Files" target="_blank">C - Header Files</a> (<em>stop before the “Once-Only Headers” paragraph</em>)</li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/-ERX2Jh115GIdTUsSixnnA" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What are nested loops and how to use them</li>
+<li>What is a function and how do you use functions</li>
+<li>What is the difference between a declaration and a definition of a function</li>
+<li>What is a prototype</li>
+<li>Scope of variables</li>
+<li>What are the <code>gcc</code> flags <code>-Wall -Werror -pedantic -Wextra -std=gnu89</code></li>
+<li>What are header files and how to to use them with <code>#include</code></li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li>
+<li>You are not allowed to use the standard library. Any use of functions like <code>printf</code>, <code>puts</code>, etc… is forbidden</li>
+<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c" title="_putchar" target="_blank">_putchar</a></li>
+<li>You don’t have to push <code>_putchar.c</code>, we will use our file. If you do it won’t be taken into account</li>
+<li>In the following examples, the <code>main.c</code> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one shown in the examples</li>
+<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>main.h</code></li>
+<li>Don’t forget to push your header file</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>More Info</h2>
+
+<p>You do not have to understand the call by reference (address), stack, static variables, recursions or arrays, yet.</p>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+
+      <section class="quiz_questions_show_container">
+          <div class="quiz_question_item_container" data-role="quiz_question376" data-position="2">
+            <div class=" clearfix" id="quiz_question-376">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>A</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="376">
+                <li class="">
+
+  <input type="radio" name="376" id="376-1505520496569" value="1505520496569" data-quiz-answer-id="1505520496569" data-quiz-question-id="376">
+  <label for="376-1505520496569"><p>97</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="376" id="376-1505520524374" value="1505520524374" data-quiz-answer-id="1505520524374" data-quiz-question-id="376">
+  <label for="376-1505520524374"><p>65</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="376" id="376-1505520530933" value="1505520530933" data-quiz-answer-id="1505520530933" data-quiz-question-id="376">
+  <label for="376-1505520530933"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="376" id="376-1505520527661" value="1505520527661" data-quiz-answer-id="1505520527661" data-quiz-question-id="376">
+  <label for="376-1505520527661"><p>12</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question378" data-position="4">
+            <div class=" clearfix" id="quiz_question-378">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>J</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="378">
+                <li class="">
+
+  <input type="radio" name="378" id="378-1505520551476" value="1505520551476" data-quiz-answer-id="1505520551476" data-quiz-question-id="378">
+  <label for="378-1505520551476"><p>70</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="378" id="378-1505520557207" value="1505520557207" data-quiz-answer-id="1505520557207" data-quiz-question-id="378">
+  <label for="378-1505520557207"><p>72</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="378" id="378-1505520563226" value="1505520563226" data-quiz-answer-id="1505520563226" data-quiz-question-id="378">
+  <label for="378-1505520563226"><p>76</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="378" id="378-1505520560343" value="1505520560343" data-quiz-answer-id="1505520560343" data-quiz-question-id="378">
+  <label for="378-1505520560343"><p>74</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question382" data-position="8">
+            <div class=" clearfix" id="quiz_question-382">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the result of <code>12 % 2</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="382">
+                <li class="">
+
+  <input type="radio" name="382" id="382-1505520654315" value="1505520654315" data-quiz-answer-id="1505520654315" data-quiz-question-id="382">
+  <label for="382-1505520654315"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="382" id="382-1505520633337" value="1505520633337" data-quiz-answer-id="1505520633337" data-quiz-question-id="382">
+  <label for="382-1505520633337"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="382" id="382-1505520656948" value="1505520656948" data-quiz-answer-id="1505520656948" data-quiz-question-id="382">
+  <label for="382-1505520656948"><p>2</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question379" data-position="5">
+            <div class=" clearfix" id="quiz_question-379">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>0</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="379">
+                <li class="">
+
+  <input type="radio" name="379" id="379-1505520572694" value="1505520572694" data-quiz-answer-id="1505520572694" data-quiz-question-id="379">
+  <label for="379-1505520572694"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="379" id="379-1505520568283" value="1505520568283" data-quiz-answer-id="1505520568283" data-quiz-question-id="379">
+  <label for="379-1505520568283"><p>79</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="379" id="379-1505520579610" value="1505520579610" data-quiz-answer-id="1505520579610" data-quiz-question-id="379">
+  <label for="379-1505520579610"><p>48</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question384" data-position="10">
+            <div class=" clearfix" id="quiz_question-384">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the result of <code>12 % 10</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="384">
+                <li class="">
+
+  <input type="radio" name="384" id="384-1505520694532" value="1505520694532" data-quiz-answer-id="1505520694532" data-quiz-question-id="384">
+  <label for="384-1505520694532"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="384" id="384-1505520696975" value="1505520696975" data-quiz-answer-id="1505520696975" data-quiz-question-id="384">
+  <label for="384-1505520696975"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="384" id="384-1505520700383" value="1505520700383" data-quiz-answer-id="1505520700383" data-quiz-question-id="384">
+  <label for="384-1505520700383"><p>3</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="384" id="384-1505520698322" value="1505520698322" data-quiz-answer-id="1505520698322" data-quiz-question-id="384">
+  <label for="384-1505520698322"><p>2</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question385" data-position="11">
+            <div class=" clearfix" id="quiz_question-385">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the result of <code>89 % 7</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="385">
+                <li class="">
+
+  <input type="radio" name="385" id="385-1505520707724" value="1505520707724" data-quiz-answer-id="1505520707724" data-quiz-question-id="385">
+  <label for="385-1505520707724"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="385" id="385-1505520709611" value="1505520709611" data-quiz-answer-id="1505520709611" data-quiz-question-id="385">
+  <label for="385-1505520709611"><p>2</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="385" id="385-1505520712796" value="1505520712796" data-quiz-answer-id="1505520712796" data-quiz-question-id="385">
+  <label for="385-1505520712796"><p>5</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="385" id="385-1505520711130" value="1505520711130" data-quiz-answer-id="1505520711130" data-quiz-question-id="385">
+  <label for="385-1505520711130"><p>3</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question375" data-position="1">
+            <div class=" clearfix" id="quiz_question-375">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Which of these loop statements don’t exist?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="375">
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520461236" value="1505520461236" data-quiz-answer-id="1505520461236" data-quiz-question-id="375">
+  <label for="375-1505520461236"><p><code>loop_to</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520473454" value="1505520473454" data-quiz-answer-id="1505520473454" data-quiz-question-id="375">
+  <label for="375-1505520473454"><p><code>each</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520439710" value="1505520439710" data-quiz-answer-id="1505520439710" data-quiz-question-id="375">
+  <label for="375-1505520439710"><p><code>while</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520434993" value="1505520434993" data-quiz-answer-id="1505520434993" data-quiz-question-id="375">
+  <label for="375-1505520434993"><p><code>for</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520451761" value="1505520451761" data-quiz-answer-id="1505520451761" data-quiz-question-id="375">
+  <label for="375-1505520451761"><p><code>do... while</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="375" id="375-1505520445250" value="1505520445250" data-quiz-answer-id="1505520445250" data-quiz-question-id="375">
+  <label for="375-1505520445250"><p><code>foreach</code></p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question377" data-position="3">
+            <div class=" clearfix" id="quiz_question-377">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>a</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="377">
+                <li class="">
+
+  <input type="radio" name="377" id="377-1505520535141" value="1505520535141" data-quiz-answer-id="1505520535141" data-quiz-question-id="377">
+  <label for="377-1505520535141"><p>97</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="377" id="377-1505520540319" value="1505520540319" data-quiz-answer-id="1505520540319" data-quiz-question-id="377">
+  <label for="377-1505520540319"><p>65</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="377" id="377-1505520548061" value="1505520548061" data-quiz-answer-id="1505520548061" data-quiz-question-id="377">
+  <label for="377-1505520548061"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="377" id="377-1505520542808" value="1505520542808" data-quiz-answer-id="1505520542808" data-quiz-question-id="377">
+  <label for="377-1505520542808"><p>12</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question380" data-position="6">
+            <div class=" clearfix" id="quiz_question-380">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>-</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="380">
+                <li class="">
+
+  <input type="radio" name="380" id="380-1505520602298" value="1505520602298" data-quiz-answer-id="1505520602298" data-quiz-question-id="380">
+  <label for="380-1505520602298"><p>3</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="380" id="380-1505520588547" value="1505520588547" data-quiz-answer-id="1505520588547" data-quiz-question-id="380">
+  <label for="380-1505520588547"><p>45</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="380" id="380-1505520607246" value="1505520607246" data-quiz-answer-id="1505520607246" data-quiz-question-id="380">
+  <label for="380-1505520607246"><p>47</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question383" data-position="9">
+            <div class=" clearfix" id="quiz_question-383">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the result of <code>12 % 3</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="383">
+                <li class="">
+
+  <input type="radio" name="383" id="383-1505520669153" value="1505520669153" data-quiz-answer-id="1505520669153" data-quiz-question-id="383">
+  <label for="383-1505520669153"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="383" id="383-1505520672275" value="1505520672275" data-quiz-answer-id="1505520672275" data-quiz-question-id="383">
+  <label for="383-1505520672275"><p>1</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="383" id="383-1505520675325" value="1505520675325" data-quiz-answer-id="1505520675325" data-quiz-question-id="383">
+  <label for="383-1505520675325"><p>3</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="383" id="383-1505520673874" value="1505520673874" data-quiz-answer-id="1505520673874" data-quiz-question-id="383">
+  <label for="383-1505520673874"><p>2</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question381" data-position="7">
+            <div class=" clearfix" id="quiz_question-381">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the ASCII value of <code>5</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="381">
+                <li class="">
+
+  <input type="radio" name="381" id="381-1505520626031" value="1505520626031" data-quiz-answer-id="1505520626031" data-quiz-question-id="381">
+  <label for="381-1505520626031"><p>53</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="381" id="381-1505520612483" value="1505520612483" data-quiz-answer-id="1505520612483" data-quiz-question-id="381">
+  <label for="381-1505520612483"><p>50</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="381" id="381-1505520628708" value="1505520628708" data-quiz-answer-id="1505520628708" data-quiz-question-id="381">
+  <label for="381-1505520628708"><p>5</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+          <div class="quiz_questions_results">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+            <button class="btn btn-primary" data-project-id="214">Submit answers</button>
+            <div class="error"></div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+
+        <h2 class="gap warning">Please make sure to validate all quiz questions before moving on to project tasks </h2>
+
+  </div>
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>

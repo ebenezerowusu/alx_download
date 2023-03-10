@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/539 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/js"></script><script async="" src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":5498,"visitorType":"student","batch":{"id":64,"fullNameWithC":"ACC-0123 (C#12)","schoolLocation":{"id":2,"name":"Accra"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x03. C - Debugging | Accra Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x03. C - Debugging _ Accra Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x03. C - Debugging _ Accra Intranet_files/application_alx-5cd7b579ddb6d0571ae6ab271f02344e26a6e5dd6ec5b7a6348f6b267ccbb933.css">
+      <script src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3dd2c9eb846bdd673.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="sl0HOH28VbVooWDDVixXG7laTdE2NCniHCsXMp1740yzj1J07uMp6aXb4b9_Esgm4Ae1E4VUIx4MGaeZssQ-BQ">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/application-af6c05f628c911d935b1.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x03. C - Debugging _ Accra Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<div class="project row">
+  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
+
+      <h1 class="gap">0x03. C - Debugging</h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:7,&quot;value&quot;:&quot;C&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:31,&quot;value&quot;:&quot;Debugging&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">C</span><span class="label label-primary" style="font-size: 14px;">Debugging</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;author&quot;:&quot;Carrie Ybay&quot;,&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-02-21T06:00:00.000+00:00&quot;,&quot;ends_at&quot;:&quot;2023-02-24T06:00:00.000+00:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-02-25T06:00:00.000+00:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Carrie Ybay</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-21 06:00 (GMT+00:00)"><span class="datetime">Feb 21, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-24 06:00 (GMT+00:00)"><span class="datetime">Feb 24, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          0.0/40 mandatory
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>0.0%</strong>
+        <ul>
+          <li>Mandatory: 0.0%</li>
+            <li>Optional: no optional tasks</li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="539"></div>
+
+
+
+      
+
+      
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch:</strong></p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/faGcpiJiejHH6GhqpmbhUw" title="Debugging" target="_blank">Debugging</a></li>
+<li><a href="https://intranet.alxswe.com/rltoken/RaecqJBNkmZ92vLMpNDuGg" title="Rubber Duck Debugging" target="_blank">Rubber Duck Debugging</a></li>
+</ul>
+
+<p>Debugging is the process of finding and fixing errors in software that prevents it from running correctly. As you become a more advanced programmer and an industry engineer, you will learn how to use debugging tools such as <code>gdb</code> or built-in tools that IDEs have. However, it’s important to understand the concepts and processes of debugging manually.</p>
+
+<p><img src="./Project_ 0x03. C - Debugging _ Accra Intranet_files/af682f2cbb6d73fd4e42.jpg" alt="" loading="lazy" style=""></p>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/b8uX1nIy0A55tWVlIRTaHQ" title="explain to anyone" target="_blank">explain to anyone</a>, without the help of Google:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What is debugging</li>
+<li>What are some methods of debugging manually</li>
+<li>How to read the error messages</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
+<li>All your files should end with a new line</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <code>betty-style.pl</code> and <code>betty-doc.pl</code></li>
+<li>A README.md file at the root of the repo, containing a description of the repository</li>
+<li>A README.md file, at the root of the folder of this project (i.e. <code>0x03-debugging</code>), describing what this project is about</li>
+</ul>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+
+      <section class="quiz_questions_show_container">
+          <div class="quiz_question_item_container" data-role="quiz_question864" data-position="2">
+            <div class=" clearfix" id="quiz_question-864">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The following code gives this incorrect output. Which of the following statements about what is causing the error is true?</p>
+
+<pre><code>carrie@ubuntu:/debugging$ cat main.c                               
+#include &lt;stdio.h&gt;                                                                                 
+
+/**                                                                                                
+ * main - debugging example                                                                        
+ * Return: 0                                                                                       
+ */                                                                                                
+int main(void)                                                                                     
+{                                                                                                  
+        int i;                                                                                     
+        int j;                                                                                     
+
+        for (i = 0; i &lt; 10; i++)                                                                   
+        {                                                                                          
+                j = 0;                                                                             
+                while (j &lt; 10)                                                                     
+                {                                                                                  
+                        printf("%d", j);                                                           
+                }                                                                                  
+                printf("\n");                                                                      
+        }                                                                                          
+
+        return (0);                                                                                
+}                                                                                                  
+carrie@ubuntu:/debugging$
+</code></pre>
+
+<pre><code>carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic main.c                                                                                                  
+carrie@ubuntu:/debugging$ ./a.out
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 &lt;...&gt;
+^Ccarrie@ubuntu:/debugging$
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="864">
+                <li class="">
+
+  <input type="checkbox" name="864" id="864-1557782212596" value="1557782212596" data-quiz-answer-id="1557782212596" data-quiz-question-id="864">
+  <label for="864-1557782212596"><p><code>j</code> is always equal to <code>i</code> so the loop will never end</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="864" id="864-1557782211325" value="1557782211325" data-quiz-answer-id="1557782211325" data-quiz-question-id="864">
+  <label for="864-1557782211325"><p><code>j</code> never increments so it will always be less than <code>10</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="864" id="864-1557782214161" value="1557782214161" data-quiz-answer-id="1557782214161" data-quiz-question-id="864">
+  <label for="864-1557782214161"><p><code>j</code> never increments so it is always going to print <code>0</code></p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question866" data-position="4">
+            <div class=" clearfix" id="quiz_question-866">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>This code doesn’t work as intended. </p>
+
+<pre><code>#include "main.h"
+
+/**
+* main - prints even numbers from 0 to 100
+* Return: 0
+*/
+
+int main(void)
+{
+        int i;
+
+        for (i = 0; i &lt; 100; i++)
+        {
+                if (i % 2 != 0)
+                {
+                        continue;
+                }
+                else
+                {
+                        break;
+                }
+
+                printf("%d\n", i);
+        }
+
+        return(0);
+}
+</code></pre>
+
+<p>Let’s add <code>printf</code> statements to the code. What information do the <code>printf</code> statements tell us about how our code is executed?</p>
+
+<pre><code>#include "main.h"
+
+/**
+* main - prints even numbers from 0 to 100
+* Return: 0
+*/
+
+int main(void)
+{
+        int i;
+
+        printf("Before loop\n");
+
+        for (i = 0; i &lt; 100; i++)
+        {
+                if (i % 2 != 0)
+                {
+                        printf("i is not even so don't print\n");
+                        continue;
+                }
+                else
+                {
+                        printf("i is even, break to print\n");
+                        break;
+                }
+
+                printf("Outside of if/else, still inside for loop\n");
+
+                printf("%d\n", i);
+        }
+
+        printf("For loop exited\n");
+
+        return(0);
+}
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="866">
+                <li class="">
+
+  <input type="checkbox" name="866" id="866-1557858397111" value="1557858397111" data-quiz-answer-id="1557858397111" data-quiz-question-id="866">
+  <label for="866-1557858397111"><p>A <code>printf</code> statement shows when the <code>for</code> loop is finished</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="866" id="866-1557858429748" value="1557858429748" data-quiz-answer-id="1557858429748" data-quiz-question-id="866">
+  <label for="866-1557858429748"><p>A <code>printf</code> statement shows exactly how many times the loop executes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="866" id="866-1557858575741" value="1557858575741" data-quiz-answer-id="1557858575741" data-quiz-question-id="866">
+  <label for="866-1557858575741"><p>A <code>printf</code> statement shows that there is an infinite loop in the code</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="866" id="866-1557858506856" value="1557858506856" data-quiz-answer-id="1557858506856" data-quiz-question-id="866">
+  <label for="866-1557858506856"><p><code>printf</code> statements shows that <code>break</code> will cause “For loop exited” to print, indicating that the even number is never printed</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question863" data-position="1">
+            <div class=" clearfix" id="quiz_question-863">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Look at the following code.</p>
+
+<pre><code>carrie@ubuntu:/debugging$ cat main.c                                
+#include &lt;stdio.h&gt;                                                                                  
+
+/**                                                                                                 
+ * main - debugging example                                                                         
+ * Return: 0                                                                                        
+ */                                                                                                 
+int main(void)                                                                                      
+{                                                                                                   
+        char *hello = "Hello, World!";                                                              
+
+        for (i = 0; hello[i] != '\0'; i++)                                                          
+        {                                                                                           
+                printf("%c", hello[i]);                                                             
+        }                                                                                           
+
+        printf("\n");                                                                               
+
+        return (0);                                                                                 
+}                                                                                                   
+carrie@ubuntu:/debugging$
+</code></pre>
+
+<pre><code>carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic main.
+c                                                                                                   
+main.c: In function ‘main’:                                                                         
+main.c:11:7: error: ‘i’ undeclared (first use in this function)                                     
+  for (i = 0; hello[i] != '\0'; i++)                                                                
+       ^                                                                                            
+main.c:11:7: note: each undeclared identifier is reported only once for each function it appears in
+main.c:9:8: error: variable ‘hello’ set but not used [-Werror=unused-but-set-variable]              
+  char *hello = "Hello, World!";                                                                    
+        ^                                                                                           
+cc1: all warnings being treated as errors                                                           
+carrie@ubuntu:/debugging$                         
+</code></pre>
+
+<p>In the <code>main.c</code> file, on what line is the first error that the compiler returns?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="863">
+                <li class="">
+
+  <input type="radio" name="863" id="863-1557782067998" value="1557782067998" data-quiz-answer-id="1557782067998" data-quiz-question-id="863">
+  <label for="863-1557782067998"><p>11</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="863" id="863-1557782064790" value="1557782064790" data-quiz-answer-id="1557782064790" data-quiz-question-id="863">
+  <label for="863-1557782064790"><p>9</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="863" id="863-1557782070360" value="1557782070360" data-quiz-answer-id="1557782070360" data-quiz-question-id="863">
+  <label for="863-1557782070360"><p>7</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question865" data-position="3">
+            <div class=" clearfix" id="quiz_question-865">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The following code gives this output. What is the error?</p>
+
+<pre><code>carrie@ubuntu:/debugging$ cat main.c                                
+#include &lt;stdio.h&gt;                                                                                  
+
+/**                                                                                                 
+ * main - debugging example                                                                         
+ * Return: 0                                                                                        
+ */                                                                                                 
+int main(void)                                                                                      
+{                                                                                                   
+        int i;                                                                                      
+        int j;                                                                                      
+        int k;                                                                                      
+
+        i = 0;                                                                                      
+        j = 1000;                                                                                   
+        while (i &lt; j)                                                                               
+        {                                                                                           
+                k = j / 98;                                                                         
+                i = i + k;                                                                          
+                printf("%d\n", i);                                                                  
+                j == j - 1;                                                                         
+        }                                                                                           
+
+        return (0);                                                                                 
+}                                                                                                   
+carrie@ubuntu:/debugging$
+</code></pre>
+
+<pre><code>carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic main.
+c                                                                                                   
+main.c: In function ‘main’:                                                                         
+main.c:20:3: error: statement with no effect [-Werror=unused-value]                                 
+   j == j - 1;                                                                                      
+   ^                                                                                                
+cc1: all warnings being treated as errors                                                           
+carrie@ubuntu:/debugging$
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="865">
+                <li class="">
+
+  <input type="radio" name="865" id="865-1557782393037" value="1557782393037" data-quiz-answer-id="1557782393037" data-quiz-question-id="865">
+  <label for="865-1557782393037"><p>We want to assign <code>j</code> a new value, not compare it, so it should be <code>j = j - 1</code> instead of <code>j == j - 1</code></p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="865" id="865-1557782391227" value="1557782391227" data-quiz-answer-id="1557782391227" data-quiz-question-id="865">
+  <label for="865-1557782391227"><p>We don’t need to assign a new value to <code>j</code> because it doesn’t do anything</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="865" id="865-1557782394286" value="1557782394286" data-quiz-answer-id="1557782394286" data-quiz-question-id="865">
+  <label for="865-1557782394286"><p>We want to compare <code>j</code> so we need an <code>if</code> statement before <code>j == j - 1</code></p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+          <div class="quiz_questions_results">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+            <button class="btn btn-primary" data-project-id="539">Submit answers</button>
+            <div class="error"></div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+
+        <h2 class="gap warning">Please make sure to validate all quiz questions before moving on to project tasks </h2>
+
+  </div>
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>

@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://intranet.alxswe.com/projects/216 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/js"></script><script async="" src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":5498,"visitorType":"student","batch":{"id":64,"fullNameWithC":"ACC-0123 (C#12)","schoolLocation":{"id":2,"name":"Accra"}},"curriculum":{"id":1,"name":"Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x05. C - Pointers, arrays and strings | Accra Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/application_alx-5cd7b579ddb6d0571ae6ab271f02344e26a6e5dd6ec5b7a6348f6b267ccbb933.css">
+      <script src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/loader.js"></script>
+      <script src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/application-d6aae7f7853f92b7c29b12f8d839da6ba98c61e2d3a4c5d3dd2c9eb846bdd673.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://intranet.alxswe.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="VJ4iUzXlZHaVbzzvy_CafxIUtGUpuaPtOxpocd6jGM1VTHcfproYKlgVvZPizgVCS0lMp5rZqRErKNja8RzFhA">
+
+      <link rel="apple-touch-icon" href="https://intranet.alxswe.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/application-af6c05f628c911d935b1.js"></script>
+      <link rel="stylesheet" media="screen" href="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/application-87456da7.css">
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <input type="hidden" id="hbtn-slack-url" value="https://alx-students.slack.com">
+      <nav class="navbar navbar-default navbar-fixed-top topbar visible-xs">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="https://intranet.alxswe.com/">
+      <div class="logo"></div>
+</a>  </div>
+
+  <div class="collapse navbar-collapse navigation" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div class="hidden-xs navigation sidebar">
+  <a class="logo-container" href="https://intranet.alxswe.com/">
+    <div class="logo"></div>
+</a>
+  <ul>
+    
+
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Planning"><a href="https://intranet.alxswe.com/planning/me"><div class="icon "><i aria-hidden="true" class="fa fa-calendar "></i></div><div class="visible-xs">My Planning</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-current-projects-item" title="" data-original-title="Projects"><a href="https://intranet.alxswe.com/projects/current"><div class="icon "><i aria-hidden="true" class="fa fa-code-fork "></i></div><div class="visible-xs">Projects</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="QA Reviews I can make"><a href="https://intranet.alxswe.com/corrections/to_review"><div class="icon "><i aria-hidden="true" class="fa fa-check "></i></div><div class="visible-xs">QA Reviews I can make</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Evaluation quizzes"><a href="https://intranet.alxswe.com/dashboards/my_current_evaluation_quizzes"><div class="icon "><i aria-hidden="true" class="fa fa-question "></i></div><div class="visible-xs">Evaluation quizzes</div></a></li>
+
+    <hr title="My resources">
+
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Curriculums"><a href="https://intranet.alxswe.com/dashboards/my_curriculums"><div class="icon "><i aria-hidden="true" class="fa fa-graduation-cap "></i></div><div class="visible-xs">Curriculums</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-concepts-item" title="" data-original-title="Concepts"><a href="https://intranet.alxswe.com/concepts"><div class="icon "><i aria-hidden="true" class="fa fa-file-text "></i></div><div class="visible-xs">Concepts</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-video-rooms" title="" data-original-title="Conference rooms"><a href="https://intranet.alxswe.com/dashboards/video_rooms"><div class="icon "><i aria-hidden="true" class="fa fa-comments "></i></div><div class="visible-xs">Conference rooms</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Servers"><a href="https://intranet.alxswe.com/servers"><div class="icon "><i aria-hidden="true" class="fa fa-server "></i></div><div class="visible-xs">Servers</div></a></li>
+    <li data-container="body" data-placement="right" data-toggle="tooltip" id="sidebar-dashboards-my-containers" title="" data-original-title="Sandboxes"><a href="https://intranet.alxswe.com/user_containers/current"><div class="icon "><i aria-hidden="true" class="fa fa-terminal "></i></div><div class="visible-xs">Sandboxes</div></a></li>
+    
+    <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Video on demand"><a href="https://intranet.alxswe.com/dashboards/videos"><div class="icon "><i aria-hidden="true" class="fa fa-film "></i></div><div class="visible-xs">Video on demand</div></a></li>
+
+      <hr title="My campus">
+
+      
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Peers"><a href="https://intranet.alxswe.com/users/peers"><div class="icon "><i aria-hidden="true" class="fa fa-users "></i></div><div class="visible-xs">Peers</div></a></li>
+      <li data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Captain&#39;s Logs"><a href="https://intranet.alxswe.com/dashboards/my_captain_log"><div class="icon "><i aria-hidden="true" class="fa fa-book "></i></div><div class="visible-xs">Captain's Logs</div></a></li>
+
+
+<hr class="visible-xs">
+
+<li>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="Slack">
+      <a target="_blank" href="https://alx-students.slack.com/">
+        <div class="image slack">
+          <div class="inner"></div>
+        </div>
+        <div class="visible-xs">Slack</div>
+</a>    </div>
+
+  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+    <a href="https://intranet.alxswe.com/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url(&#39;https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/005/498/thumb/IMG-20210912-WA0244.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230301%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230301T105931Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e2705fd86eb28a36e100f51890986c38b34227d264a5eab7780d00db2be6db1c&#39;)"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
+</li>
+
+
+  </ul>
+</div>
+
+
+    <main>
+        <div id="layout-bars">
+          
+          
+          
+          
+          
+        </div>
+
+      <article class="">
+
+        
+<div class="project row">
+  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
+
+      <h1 class="gap">0x05. C - Pointers, arrays and strings</h1>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:7,&quot;value&quot;:&quot;C&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="label label-primary" style="font-size: 14px;">C</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;author&quot;:&quot;Julien Barbier&quot;,&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2023-02-27T06:00:00.000+00:00&quot;,&quot;ends_at&quot;:&quot;2023-02-28T06:00:00.000+00:00&quot;,&quot;second_deadline_at&quot;:&quot;2023-03-01T06:00:00.000+00:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Julien Barbier</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-calendar fa-fw"></i> Project over - took place from <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-27 06:00 (GMT+00:00)"><span class="datetime">Feb 27, 2023 6:00 AM</span></span> to <span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="2023-02-28 06:00 (GMT+00:00)"><span class="datetime">Feb 28, 2023 6:00 AM</span></span></li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> An auto review will be launched at the deadline</li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+        <strong>Auto QA review:</strong>
+          0.0/71 mandatory
+            &amp;
+            0.0/24 optional
+      </li>
+    <li>
+      <strong>Altogether:</strong>
+        &nbsp;<strong>0.0%</strong>
+        <ul>
+          <li>Mandatory: 0.0%</li>
+            <li>Optional: 0.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  0.0%
+                    + (0.0% * 0.0%)
+              &nbsp;==&nbsp;<strong>0.0%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+    
+
+
+    <div id="project_id" style="display: none" data-project-id="216"></div>
+
+
+
+      
+
+        <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Concepts</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <em>For this project, we expect you to look at these concepts:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/60">Pointers and arrays</a>
+          </li>
+          <li>
+            <a href="https://intranet.alxswe.com/concepts/120">Data Structures</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+      <div class="panel panel-default" id="project-description">
+  <div class="panel-body">
+    <p><img src="./Project_ 0x05. C - Pointers, arrays and strings _ Accra Intranet_files/IMG_2410.JPG"></p>
+
+<h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/PVi2XMuApOK3jfhsoqsyXw" title="C - Arrays" target="_blank">C - Arrays</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/oyHybzYBeFiLUMALpb_usA" title="C - Pointers" target="_blank">C - Pointers</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/sUeh9qDyW9pePOfJIpx_Bw" title="C - Strings" target="_blank">C - Strings</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/0k6CD2ZMzSFOMUxMOBiAlQ" title="Memory Layout" target="_blank">Memory Layout</a></li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://intranet.alxswe.com/rltoken/OLGzIaD19ia5NZ-WCMckeg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What are pointers and how to use them</li>
+<li>What are arrays and how to use them</li>
+<li>What are the differences between pointers and arrays</li>
+<li>How to use strings and how to manipulate them</li>
+<li>Scope of variables</li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li>
+<li>You are not allowed to use the standard library. Any use of functions like <code>printf</code>, <code>puts</code>, etc… is forbidden</li>
+<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c" title="_putchar" target="_blank">_putchar</a></li>
+<li>You don’t have to push <code>_putchar.c</code>, we will use our file. If you do it won’t be taken into account</li>
+<li>In the following examples, the <code>main.c</code> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one shown in the examples</li>
+<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>main.h</code></li>
+<li>Don’t forget to push your header file</li>
+</ul>
+
+<h2>More Info</h2>
+
+<p>You do not need to learn about pointers to functions, pointers to pointers, multidimensional arrays, arrays of structures, <code>malloc</code> and <code>free</code> - yet.</p>
+
+  </div>
+</div>
+
+
+      
+
+        <div class="panel panel-default" id="project-quiz-questions-title">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Quiz questions
+      </h3>
+    </div>
+
+    <div class="panel-body">
+
+
+      <section class="quiz_questions_show_container">
+          <div class="quiz_question_item_container" data-role="quiz_question416" data-position="2">
+            <div class=" clearfix" id="quiz_question-416">
+
+    <h4 class="quiz_question">
+        
+        Question #0
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the size of a pointer to an <code>int</code> (on a 64-bit architecture)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="416">
+                <li class="">
+
+  <input type="radio" name="416" id="416-1506300074070" value="1506300074070" data-quiz-answer-id="1506300074070" data-quiz-question-id="416">
+  <label for="416-1506300074070"><p>1 byte</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="416" id="416-1506300077420" value="1506300077420" data-quiz-answer-id="1506300077420" data-quiz-question-id="416">
+  <label for="416-1506300077420"><p>2 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="416" id="416-1506300084530" value="1506300084530" data-quiz-answer-id="1506300084530" data-quiz-question-id="416">
+  <label for="416-1506300084530"><p>8 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="416" id="416-1506300081076" value="1506300081076" data-quiz-answer-id="1506300081076" data-quiz-question-id="416">
+  <label for="416-1506300081076"><p>4 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question427" data-position="13">
+            <div class=" clearfix" id="quiz_question-427">
+
+    <h4 class="quiz_question">
+        
+        Question #1
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>We declare the following variable</p>
+
+<pre><code>int arr[5];
+</code></pre>
+
+<p>What is the equivalent of typing <code>arr[2]</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="427">
+                <li class="">
+
+  <input type="radio" name="427" id="427-1506302274650" value="1506302274650" data-quiz-answer-id="1506302274650" data-quiz-question-id="427">
+  <label for="427-1506302274650"><p>*arr + 2</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="427" id="427-1506302266007" value="1506302266007" data-quiz-answer-id="1506302266007" data-quiz-question-id="427">
+  <label for="427-1506302266007"><p>arr + 2</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="427" id="427-1506302298456" value="1506302298456" data-quiz-answer-id="1506302298456" data-quiz-question-id="427">
+  <label for="427-1506302298456"><p>*(arr + 2)</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question418" data-position="4">
+            <div class=" clearfix" id="quiz_question-418">
+
+    <h4 class="quiz_question">
+        
+        Question #2
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the identifier to print an address with <code>printf</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="418">
+                <li class="">
+
+  <input type="radio" name="418" id="418-1506300141777" value="1506300141777" data-quiz-answer-id="1506300141777" data-quiz-question-id="418">
+  <label for="418-1506300141777"><p>%a</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="418" id="418-1506300148546" value="1506300148546" data-quiz-answer-id="1506300148546" data-quiz-question-id="418">
+  <label for="418-1506300148546"><p>%d</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="418" id="418-1506300157631" value="1506300157631" data-quiz-answer-id="1506300157631" data-quiz-question-id="418">
+  <label for="418-1506300157631"><p>%x</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="418" id="418-1506300152071" value="1506300152071" data-quiz-answer-id="1506300152071" data-quiz-question-id="418">
+  <label for="418-1506300152071"><p>%p</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question422" data-position="8">
+            <div class=" clearfix" id="quiz_question-422">
+
+    <h4 class="quiz_question">
+        
+        Question #3
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the value of <code>n</code> after the following code is executed?</p>
+
+<pre><code>int n = 98;
+int *p = &amp;n;
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="422">
+                <li class="">
+
+  <input type="radio" name="422" id="422-1506301490528" value="1506301490528" data-quiz-answer-id="1506301490528" data-quiz-question-id="422">
+  <label for="422-1506301490528"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="422" id="422-1506301498267" value="1506301498267" data-quiz-answer-id="1506301498267" data-quiz-question-id="422">
+  <label for="422-1506301498267"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="422" id="422-1506301509830" value="1506301509830" data-quiz-answer-id="1506301509830" data-quiz-question-id="422">
+  <label for="422-1506301509830"><p>402</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="422" id="422-1506301503271" value="1506301503271" data-quiz-answer-id="1506301503271" data-quiz-question-id="422">
+  <label for="422-1506301503271"><p>99</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question419" data-position="5">
+            <div class=" clearfix" id="quiz_question-419">
+
+    <h4 class="quiz_question">
+        
+        Question #4
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>The process of getting the value that is stored in the memory location pointed to by a pointer is called:</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="419">
+                <li class="">
+
+  <input type="radio" name="419" id="419-1506300310549" value="1506300310549" data-quiz-answer-id="1506300310549" data-quiz-question-id="419">
+  <label for="419-1506300310549"><p>Pointing</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="419" id="419-1506300316946" value="1506300316946" data-quiz-answer-id="1506300316946" data-quiz-question-id="419">
+  <label for="419-1506300316946"><p>Accessing</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="419" id="419-1506300369305" value="1506300369305" data-quiz-answer-id="1506300369305" data-quiz-question-id="419">
+  <label for="419-1506300369305"><p>Casting</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="419" id="419-1506300332905" value="1506300332905" data-quiz-answer-id="1506300332905" data-quiz-question-id="419">
+  <label for="419-1506300332905"><p>Dereferencing</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question424" data-position="10">
+            <div class=" clearfix" id="quiz_question-424">
+
+    <h4 class="quiz_question">
+        
+        Question #5
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the value of <code>n</code> after the following code is executed?</p>
+
+<pre><code>int n = 98;
+int *p = &amp;n;
+
+*p = 402;
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="424">
+                <li class="">
+
+  <input type="radio" name="424" id="424-1506301542129" value="1506301542129" data-quiz-answer-id="1506301542129" data-quiz-question-id="424">
+  <label for="424-1506301542129"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="424" id="424-1506301545063" value="1506301545063" data-quiz-answer-id="1506301545063" data-quiz-question-id="424">
+  <label for="424-1506301545063"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="424" id="424-1506301553224" value="1506301553224" data-quiz-answer-id="1506301553224" data-quiz-question-id="424">
+  <label for="424-1506301553224"><p>402</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="424" id="424-1506301550503" value="1506301550503" data-quiz-answer-id="1506301550503" data-quiz-question-id="424">
+  <label for="424-1506301550503"><p>99</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question425" data-position="11">
+            <div class=" clearfix" id="quiz_question-425">
+
+    <h4 class="quiz_question">
+        
+        Question #6
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the value of <code>n</code> after the following code is executed?</p>
+
+<pre><code>int n = 98;
+int *p = &amp;n;
+
+*p++;
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="425">
+                <li class="">
+
+  <input type="radio" name="425" id="425-1506301558553" value="1506301558553" data-quiz-answer-id="1506301558553" data-quiz-question-id="425">
+  <label for="425-1506301558553"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="425" id="425-1506301562343" value="1506301562343" data-quiz-answer-id="1506301562343" data-quiz-question-id="425">
+  <label for="425-1506301562343"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="425" id="425-1506301568790" value="1506301568790" data-quiz-answer-id="1506301568790" data-quiz-question-id="425">
+  <label for="425-1506301568790"><p>402</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="425" id="425-1506301566280" value="1506301566280" data-quiz-answer-id="1506301566280" data-quiz-question-id="425">
+  <label for="425-1506301566280"><p>99</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question426" data-position="12">
+            <div class=" clearfix" id="quiz_question-426">
+
+    <h4 class="quiz_question">
+        
+        Question #7
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>We declare the following variable</p>
+
+<pre><code>int arr[5];
+</code></pre>
+
+<p>What is the size in memory of the variable <code>arr</code>?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="426">
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302254544" value="1506302254544" data-quiz-answer-id="1506302254544" data-quiz-question-id="426">
+  <label for="426-1506302254544"><p>32 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302229920" value="1506302229920" data-quiz-answer-id="1506302229920" data-quiz-question-id="426">
+  <label for="426-1506302229920"><p>20 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302194383" value="1506302194383" data-quiz-answer-id="1506302194383" data-quiz-question-id="426">
+  <label for="426-1506302194383"><p>5 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302185672" value="1506302185672" data-quiz-answer-id="1506302185672" data-quiz-question-id="426">
+  <label for="426-1506302185672"><p>4 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302213039" value="1506302213039" data-quiz-answer-id="1506302213039" data-quiz-question-id="426">
+  <label for="426-1506302213039"><p>10 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="426" id="426-1506302201999" value="1506302201999" data-quiz-answer-id="1506302201999" data-quiz-question-id="426">
+  <label for="426-1506302201999"><p>8 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question415" data-position="1">
+            <div class=" clearfix" id="quiz_question-415">
+
+    <h4 class="quiz_question">
+        
+        Question #8
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the size of a pointer to a <code>char</code> (on a 64-bit architecture)</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="415">
+                <li class="">
+
+  <input type="radio" name="415" id="415-1506300053315" value="1506300053315" data-quiz-answer-id="1506300053315" data-quiz-question-id="415">
+  <label for="415-1506300053315"><p>1 byte</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="415" id="415-1506300059183" value="1506300059183" data-quiz-answer-id="1506300059183" data-quiz-question-id="415">
+  <label for="415-1506300059183"><p>2 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="415" id="415-1506300067346" value="1506300067346" data-quiz-answer-id="1506300067346" data-quiz-question-id="415">
+  <label for="415-1506300067346"><p>8 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="415" id="415-1506300064217" value="1506300064217" data-quiz-answer-id="1506300064217" data-quiz-question-id="415">
+  <label for="415-1506300064217"><p>4 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question417" data-position="3">
+            <div class=" clearfix" id="quiz_question-417">
+
+    <h4 class="quiz_question">
+        
+        Question #9
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>If we have a variable called <code>var</code> of type <code>int</code>, how can we get its address in memory?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="417">
+                <li class="">
+
+  <input type="radio" name="417" id="417-1506300111392" value="1506300111392" data-quiz-answer-id="1506300111392" data-quiz-question-id="417">
+  <label for="417-1506300111392"><p>*(var)</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="417" id="417-1506300104106" value="1506300104106" data-quiz-answer-id="1506300104106" data-quiz-question-id="417">
+  <label for="417-1506300104106"><p>*var</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="417" id="417-1506300123036" value="1506300123036" data-quiz-answer-id="1506300123036" data-quiz-question-id="417">
+  <label for="417-1506300123036"><p>&amp;var</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question420" data-position="6">
+            <div class=" clearfix" id="quiz_question-420">
+
+    <h4 class="quiz_question">
+        
+        Question #10
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>Is it possible to declare a pointer to a pointer?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="420">
+                <li class="">
+
+  <input type="radio" name="420" id="420-1506300818433" value="1506300818433" data-quiz-answer-id="1506300818433" data-quiz-question-id="420">
+  <label for="420-1506300818433"><p>No</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="420" id="420-1506300812990" value="1506300812990" data-quiz-answer-id="1506300812990" data-quiz-question-id="420">
+  <label for="420-1506300812990"><p>Yes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="420" id="420-1506300823219" value="1506300823219" data-quiz-answer-id="1506300823219" data-quiz-question-id="420">
+  <label for="420-1506300823219"><p>It depends on the type the pointer is pointing to</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question423" data-position="9">
+            <div class=" clearfix" id="quiz_question-423">
+
+    <h4 class="quiz_question">
+        
+        Question #11
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What is the value of <code>n</code> after the following code is executed?</p>
+
+<pre><code>int n = 98;
+int *p = &amp;n;
+
+p = 402;
+</code></pre>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="423">
+                <li class="">
+
+  <input type="radio" name="423" id="423-1506301521562" value="1506301521562" data-quiz-answer-id="1506301521562" data-quiz-question-id="423">
+  <label for="423-1506301521562"><p>0</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="423" id="423-1506301526784" value="1506301526784" data-quiz-answer-id="1506301526784" data-quiz-question-id="423">
+  <label for="423-1506301526784"><p>98</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="423" id="423-1506301535285" value="1506301535285" data-quiz-answer-id="1506301535285" data-quiz-question-id="423">
+  <label for="423-1506301535285"><p>402</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="423" id="423-1506301532768" value="1506301532768" data-quiz-answer-id="1506301532768" data-quiz-question-id="423">
+  <label for="423-1506301532768"><p>99</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+          <div class="quiz_question_item_container" data-role="quiz_question421" data-position="7">
+            <div class=" clearfix" id="quiz_question-421">
+
+    <h4 class="quiz_question">
+        
+        Question #12
+    </h4>
+
+    <!-- Quiz question Body -->
+    <p>What happens when one tries to access an illegal memory location?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="421">
+                <li class="">
+
+  <input type="radio" name="421" id="421-1506300898779" value="1506300898779" data-quiz-answer-id="1506300898779" data-quiz-question-id="421">
+  <label for="421-1506300898779"><p>The operation is ignored</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="421" id="421-1506300922591" value="1506300922591" data-quiz-answer-id="1506300922591" data-quiz-question-id="421">
+  <label for="421-1506300922591"><p>Segmentation fault</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="421" id="421-1506300967027" value="1506300967027" data-quiz-answer-id="1506300967027" data-quiz-question-id="421">
+  <label for="421-1506300967027"><p>There’s a chance for the computer to catch fire, and sometimes even explode</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="421" id="421-1506300944852" value="1506300944852" data-quiz-answer-id="1506300944852" data-quiz-question-id="421">
+  <label for="421-1506300944852"><p>The computer shuts down</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+
+</div>
+
+          </div>
+
+          <div class="quiz_questions_results">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+            <button class="btn btn-primary" data-project-id="216">Submit answers</button>
+            <div class="error"></div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+
+        <h2 class="gap warning">Please make sure to validate all quiz questions before moving on to project tasks </h2>
+
+  </div>
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2023 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button class="btn btn-primary" id="search-button" data-search-active="false" data-toggle="modal" data-target="#search-modal">
+  <i aria-hidden="true" class="fa fa-search "></i>
+  <i aria-hidden="true" class="fa fa-window-minimize "></i>
+</button>
+
+        <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-labelledby="search-modal-label">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="search-bar-container">
+    <input id="search-bar" type="text" name="hbtn-search-bar" placeholder="✨Start search by typing in this field✨">
+</div>
+
+            </div>
+            <div class="modal-body">
+                <div id="modal-spinner" class="spinner gap">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <div id="search-results-container">
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <div class="modal fade" id="markdownGuideModal" tabindex="-1" role="dialog" aria-labelledby="markdownGuideModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Markdown Guide</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+</body></html>
